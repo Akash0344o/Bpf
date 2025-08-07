@@ -1,0 +1,17 @@
+.notice {
+  margin-top: 40px;
+  animation: riseFadeIn 1s ease;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.notice:hover {
+  text-shadow: 0 0 10px rgb(22, 231, 231);
+}
+
+.notice a{
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: blue;
+}

@@ -1,0 +1,95 @@
+.news {
+  margin-top: 40px;
+  animation: riseFadeIn 1s ease;
+}
+
+.headlines {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.headlines h3 {
+  color: #050531;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  animation: glow 5s infinite ease-in-out;
+}
+
+.headlines p {
+  color: #080202;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* === News Items === */
+.news-preview-container {
+  color: #050531;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.news-item, .news-item2 {
+  background: #fff;
+  border: 1px solid #ffc107;
+  padding: 20px;
+  width: 320px;
+  border-radius: 12px;
+  animation: riseFadeIn 0.7s ease;
+  box-shadow: 0 0 12px rgba(0, 255, 231, 0.2);
+  transition: transform 0.3s;
+}
+
+.news-item:hover, .news-item2:hover {
+  transform: translateY(-5px);
+  border: 1px solid #00ffe7;
+  color: #00ffe7;
+  box-shadow: 0 0 30px rgba(0, 255, 200, 0.753);
+  background-color: #1f1f1f;
+}
+
+.news-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 10px #00ffe7);
+}
+
+/* === Buttons === */
+.register-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #ffc107, #ffea00);
+  border: none;
+  color: #000;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.register-button:hover {
+  background: #fff700;
+  box-shadow: 0 0 20px rgba(255, 251, 0, 0.9);
+  color: #000;
+}
+
+.click-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #ffc107, #ffea00)   ;
+  border: none;
+  color: #000;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.click-button:hover {
+  background: #fff700;
+  box-shadow: 0 0 20px rgba(255, 251, 0, 0.9);
+  color: #000;
+}
