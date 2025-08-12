@@ -4,7 +4,7 @@ This is a responsive static website project built using HTML, CSS, and JavaScrip
 
 ## 🚀 Live Demo
 
-🌐 [Visit the Website](https://akash0344o.github.io/bpf)
+🌐 [Visit the Website](https://akash0344o.github.io/Bpf)
 
 ## 📁 Project Structure
 
