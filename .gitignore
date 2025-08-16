@@ -1,0 +1,19 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Node.js (in case you add npm)
+node_modules/
+dist/
+.env
+
+# Build tools
+*.tsbuildinfo
+.cache/

@@ -1,0 +1,107 @@
+.news {
+  margin-top: 40px;
+  animation: riseFadeIn 1s ease;
+}
+
+.headlines {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.headlines h3 {
+  color: #00ffe7;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #060b3d;
+  display: inline-block;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 5px;
+}
+.headlines h3::before {
+  content: "\f1ea"; /* FontAwesome newspaper icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+  color: #ffcc00;
+}
+
+.headlines p {
+  color: #080202;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* === News Items === */
+.news-preview-container {
+  color: #050531;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.news-item, .news-item2 {
+  background: #111;
+  color: #ddd;
+  border: 1px solid #00ffe7;
+  padding: 20px;
+  width: 320px;
+  border-radius: 14px;
+  animation: riseFadeIn 0.7s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 231, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-item:hover, .news-item2:hover {
+  transform: translateY(-6px);
+  border: 1px solid #ffcc00;
+  box-shadow: 0 0 25px #00f0ff, 0 0 15px #ffcc00;
+}
+
+.news-item h4, .news-item2 h4 {
+  color: #00ffe7;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  text-shadow: 0 0 6px #00ffe7;
+}
+
+.news-item p, .news-item2 p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+
+.news-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 10px #00ffe7);
+}
+
+/* === Buttons === */
+.register-button, .click-button {
+  margin-top: 12px;
+  padding: 10px 22px;
+  background: linear-gradient(90deg, #00ffe7, #0072ff);
+  border: none;
+  color: #111;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(0,255,231,0.5);
+}
+
+.register-button:hover, .click-button:hover {
+  background: #ffcc00;
+  color: #000;
+  box-shadow: 0 0 20px #ffcc00, 0 0 30px #00ffe7;
+}
+
+@media (max-width: 768px) {
+  .news-preview-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

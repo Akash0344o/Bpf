@@ -1,0 +1,34 @@
+.tournament {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
+  text-align: center;
+  color: #000;
+  transition: all 0.3s ease;
+  animation: riseFadeIn 1s ease;
+}
+
+.tournament:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 25px rgba(0, 255, 255, 0.6);
+}
+
+.tournament a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.tournament a:hover {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  box-shadow: 0 0 12px #00f0ff;
+}

@@ -1,0 +1,48 @@
+.notice {
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 20px;
+  background: #1a1a1a;
+  border: 1px solid #00ffe7;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+  box-shadow: 0 0 15px rgba(0, 255, 231, 0.2);
+  animation: fadeInCard 1s ease;
+}
+
+.notice h3, .notice p {
+  margin-bottom: 15px;
+}
+
+.notice i {
+  color: #ffcc00;
+  margin-right: 8px;
+}
+
+.notice a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #00ffe7;
+  padding: 6px 12px;
+  background: rgba(0,255,231,0.1);
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.notice a:hover {
+  background: #00ffe7;
+  color: #111;
+  box-shadow: 0 0 15px #00ffe7;
+}
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 2;
+    transform: translateY(0);
+  }
+}
