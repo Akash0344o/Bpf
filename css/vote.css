@@ -1,0 +1,70 @@
+/* ===== Vote Page Styling ===== */
+
+.voting-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #0b0c10, #1f2833);
+  color: #fff;
+  border-radius: 15px;
+  margin: 30px auto;
+  max-width: 1000px;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4),
+              0 0 40px rgba(255, 204, 0, 0.3);
+}
+
+.voting-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff, 0 0 15px #ffcc00;
+}
+
+.teams-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
+}
+
+/* Make Google Form iframe responsive */
+.teams-container iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 1000px;
+  border: none;
+  border-radius: 12px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .voting-section {
+    padding: 25px 15px;
+  }
+
+  .voting-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .teams-container iframe {
+    height: 900px;
+  }
+}
+
+@media (max-width: 480px) {
+  .voting-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .teams-container iframe {
+    height: 800px;
+  }
+}
+
+.section-icon {
+  width: 10rem;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 10px #00ffe7);
+}
