@@ -83,16 +83,63 @@
         </div>
     </section>
 -->
-    <section class="voting-section">
-        <div class="section-header">
-            <img src="images/vote.jpg" alt="Vote Icon" class="section-icon">
-            <h1>BPF PRESIDENTIAL ELECTION</h1>
+
+  <section class="voting-section">
+    <div class="section-header">
+      <img src="images/vote.jpg" alt="Vote Icon" class="section-icon">
+      <h1>BPF PRESIDENTIAL ELECTION</h1>
+      <p class="subtitle">Official Results of the Presidential Election</p>
+    </div>
+
+    <div class="results-container">
+      <!-- Winner Highlight -->
+      <div class="winner-card">
+        <img src="images/deep.jpg" alt="Deep" class="candidate-image">
+        <h2 class="winner-title">President: DEEP GHOSH</h2>
+        <p class="vote-score">Voting Points: <span>69.5</span></p>
+      </div>
+
+      <div class="winner-card">
+        <img src="images/bishal.jpg" alt="Bishal" class="candidate-image">
+        <h2 class="winner-title silver">Vice-President: BISHAL SAHA</h2>
+        <p class="vote-score">Voting Points: <span>68.5</span></p>
+      </div>
+
+      <!-- Other Candidates -->
+      <div class="candidates-grid">
+        <div class="candidate">
+          <img src="images/ad.jpg" alt="Akash" class="candidate-image">
+          <h3>AKASH DUTTA</h3>
+          <p class="vote-score">67.5</p>
         </div>
-        <h2>RESULTS OF VOTING</h2>
-        <div class="results-container">
-            <P>The results of Voting Coming Soon Stay Tuned For updates</P>
+        <div class="candidate">
+          <img src="images/adhyan.jpg" alt="Adhyan" class="candidate-image">
+          <h3>ADHYAN SHEE</h3>
+          <p class="vote-score">64.5</p>
         </div>
-    </section>
+        <div class="candidate">
+          <img src="images/ben10.jpg" alt="Ben-10" class="candidate-image">
+          <h3>BEN-10</h3>
+          <p class="vote-score">52.5</p>
+        </div>
+        <div class="candidate">
+          <img src="images/ron.jpg" alt="Ron" class="candidate-image">
+          <h3>RIDIM PAL</h3>
+          <p class="vote-score">52</p>
+        </div>
+        <div class="candidate">
+          <img src="images/lynx.jpg" alt="lynx" class="candidate-image">
+          <h3>MAYUKH PAL (LYNX)</h3>
+          <p class="vote-score">41.5</p>
+        </div>
+        <div class="candidate">
+          <img src="images/tanmoy.jpg" alt="Tanmoy" class="candidate-image">
+          <h3>TANMOY SAHA</h3>
+          <p class="vote-score">32</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="footer">
@@ -119,8 +166,38 @@
       <button onclick="acceptCookies()" class="btn-glow">Got it!</button>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
     <script>
+      window.onload = () => {
+    // Fire tri-color confetti burst
+    const duration = 6 * 1000; // 4 seconds
+    const end = Date.now() + duration;
+
+      (function frame() {
+        // Random confetti bursts
+        confetti({
+          particleCount: 5,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: ['#FF9933', '#FFFFFF', '#138808'] // Saffron, White, Green
+        });
+        confetti({
+          particleCount: 5,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: ['#FF9933', '#FFFFFF', '#138808']
+        });
+
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      }());
+    };
+
+      //others
          const currentPage = location.pathname.split('/').pop();
         document.querySelector(`a[href="${currentPage}"]`).classList.add('active');
 

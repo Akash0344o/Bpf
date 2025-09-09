@@ -1,32 +1,146 @@
 /* ===== Vote Page Styling ===== */
 
+/* ===== Futuristic Election Results Styling ===== */
 .voting-section {
   text-align: center;
-  padding: 40px 20px;
+  padding: 50px 20px;
   background: linear-gradient(180deg, #0b0c10, #1f2833);
   color: #fff;
-  border-radius: 15px;
-  margin: 30px auto;
-  max-width: 1000px;
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4),
-              0 0 40px rgba(255, 204, 0, 0.3);
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 1100px;
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.5),
+              0 0 50px rgba(255, 204, 0, 0.3);
+  animation: glowBox 6s ease-in-out infinite alternate;
 }
 
-.voting-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+@keyframes glowBox {
+  from { box-shadow: 0 0 25px rgba(0,240,255,.4); }
+  to { box-shadow: 0 0 50px rgba(255,200,0,.5); }
+}
+
+.section-header {
+  margin-bottom: 30px;
+}
+
+.section-header h1 {
+  font-size: 2.5rem;
   color: #00f0ff;
-  text-shadow: 0 0 10px #00f0ff, 0 0 15px #ffcc00;
+  text-shadow: 0 0 15px #00f0ff, 0 0 25px #ffcc00;
 }
 
-.teams-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
+.subtitle {
+  font-size: 1.2rem;
+  color: #ffcc00;
+  margin-top: 5px;
+  text-shadow: 0 0 10px #ffcc00;
 }
+
+.section-icon {
+  width: 7rem;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 15px #00ffe7);
+  border-radius: 12px;
+}
+
+/* Winner Cards */
+.winner-card {
+  background: linear-gradient(145deg, #101820, #1b2a41);
+  border: 2px solid #00f0ff;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 0 30px rgba(0,240,255,.3);
+  transition: transform 0.3s ease;
+}
+
+.winner-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 40px rgba(255,255,0,.4);
+}
+
+.winner-title {
+  font-size: 1.8rem;
+  margin: 15px 0 10px;
+  color: #00ffe7;
+}
+
+.winner-title.silver {
+  color: #e0e0e0;
+  text-shadow: 0 0 10px #bbb;
+}
+
+.vote-score {
+  font-size: 1.2rem;
+  color: #ffcc00;
+}
+
+.vote-score span {
+  font-weight: bold;
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff;
+}
+
+/* Candidate Grid */
+.candidates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.candidate {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0,240,255,.3);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.candidate:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(0,240,255,0.6);
+}
+
+.candidate h3 {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  color: #00f0ff;
+}
+
+.candidate .vote-score {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* Candidate Images */
+.candidate-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #00f0ff;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(0,240,255,.5);
+  transition: transform 0.3s ease;
+}
+
+.candidate-image:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .winner-title { font-size: 1.5rem; }
+  .section-header h1 { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .winner-title { font-size: 1.3rem; }
+  .section-header h1 { font-size: 1.5rem; }
+  .candidate-image { width: 90px; height: 90px; }
+}
+
 
 /* Make Google Form iframe responsive */
 .teams-container iframe {
@@ -37,7 +151,7 @@
   border-radius: 12px;
 }
 
-/* Mobile responsiveness */
+/* Mobile responsiveness /
 @media (max-width: 768px) {
   .voting-section {
     padding: 25px 15px;
@@ -67,4 +181,4 @@
   border-radius: 10px;
   margin-bottom: 10px;
   filter: drop-shadow(0 0 10px #00ffe7);
-}
+}*/
